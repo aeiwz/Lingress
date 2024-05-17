@@ -8,4 +8,3 @@ Functionally, this program strives to fit a model of metabolic profiles through 
 ```bash
 pip install lingress
 ```
-
