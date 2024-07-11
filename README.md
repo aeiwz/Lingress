@@ -4,9 +4,9 @@ The Lingress project is an initiative aimed at developing a streamlined pipeline
 Functionally, this program strives to fit a model of metabolic profiles through the application of linear regression. Its design and capabilities present a robust tool for in-depth and nuanced data analysis in the realm of metabolic studies.
 
 ## **Table of content**
-1. [How to install](##**how-to-install**)
-2. [UI peak picking](##ui-peak-picking)
-3. [Linear regression model](##linear-regression-model)
+* [How to install](##how-to-install)
+* [UI peak picking](##ui-peak-picking)
+* [Linear regression model](##linear-regression-model)
 
 
 ## **How to install**
