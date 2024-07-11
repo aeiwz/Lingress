@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+
+__auther__ = 'aeiwz'
+
+
 #Peak picking all spectra and plot using scipy and pyplot
 
 from scipy.signal import find_peaks
