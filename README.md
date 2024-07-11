@@ -5,7 +5,8 @@ Functionally, this program strives to fit a model of metabolic profiles through 
 
 ## **Table of content**
 [How to install](##how-to-install)
-[](###linear-regression-model)
+[UI peak picking](##ui-peak-picking)
+[Linear regression model](##linear-regression-model)
 
 
 ## **How to install**
@@ -14,7 +15,7 @@ Functionally, this program strives to fit a model of metabolic profiles through 
 pip install lingress
 ```
 
-### **UI Peak picking**
+## **UI Peak Picking**
 
 ```python
 #Example data
@@ -31,6 +32,6 @@ pickie_peak(spectra=spectra, ppm=ppm).run_ui()
 ```
 ![img1](./src/img/UI_peak_picking.png)
 
-### **Linear regression model**
+## **Linear Regression model**
 
 
