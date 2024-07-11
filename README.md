@@ -3,11 +3,6 @@ The Lingress project is an initiative aimed at developing a streamlined pipeline
 
 Functionally, this program strives to fit a model of metabolic profiles through the application of linear regression. Its design and capabilities present a robust tool for in-depth and nuanced data analysis in the realm of metabolic studies.
 
-## **Table of content**
-* [How to install](##how-to-install)
-* [UI peak picking](##ui-peak-picking)
-* [Linear regression model](##linear-regression-model)
-
 
 ## **How to install**
 
@@ -34,4 +29,9 @@ pickie_peak(spectra=spectra, ppm=ppm).run_ui()
 
 ## **Linear Regression model**
 
+```python
+from lingress import lin_regression
 
+mod = lin_regression(x=x, target=target, label=label, features_name=features_name)
+mod.create_dataset()
+mod.fit_model()
