@@ -84,8 +84,6 @@ plot_peaks(spectra, ppm, peaks, color_map=color_dict_)
 
 
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
 from dash.dependencies import Input, Output, State
 import plotly.graph_objects as go
 import pandas as pd
@@ -93,11 +91,20 @@ import dash_bootstrap_components as dbc
 from dash import dcc, html
 
 class pickie_peak:
+    
     def __init__(self, spectra: pd.DataFrame, ppm: list):
         self.spectra = spectra
         self.ppm = ppm
 
     def run_ui(self):
+
+        import dash
+        from dash.dependencies import Input, Output, State
+        import plotly.graph_objects as go
+        import pandas as pd
+        import dash_bootstrap_components as dbc
+        from dash import dcc, html
+        
         class plot_NMR_spec:
             def __init__(self, spectra, ppm):
                 self.spectra = spectra
