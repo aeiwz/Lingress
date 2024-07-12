@@ -53,18 +53,16 @@ mod.volcano_plot()
 ```python
 mod.resampling(n_jobs=-1, n_boots=100, adj_method='fdr_bh')
 ```
-
-  [Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers. \n
-  [Parallel(n_jobs=-1)]: Done   6 tasks      | elapsed:    3.7s \n
-  [Parallel(n_jobs=-1)]: Done  60 tasks      | elapsed:    6.7s \n
-  [Parallel(n_jobs=-1)]: Done 150 tasks      | elapsed:   11.2s \n
-  [Parallel(n_jobs=-1)]: Done 276 tasks      | elapsed:   17.8s \n
-  ... \n
-  [Parallel(n_jobs=-1)]: Done 6486 tasks      | elapsed:  5.6min \n
-  [Parallel(n_jobs=-1)]: Done 7188 tasks      | elapsed:  6.1min \n
-  [Parallel(n_jobs=-1)]: Done 7211 out of 7211 | elapsed:  6.1min finished \n
   
-
+    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+    [Parallel(n_jobs=-1)]: Done   6 tasks      | elapsed:    3.7s
+    [Parallel(n_jobs=-1)]: Done  60 tasks      | elapsed:    6.7s
+    [Parallel(n_jobs=-1)]: Done 150 tasks      | elapsed:   11.2s
+    [Parallel(n_jobs=-1)]: Done 276 tasks      | elapsed:   17.8s
+    ...
+    [Parallel(n_jobs=-1)]: Done 6486 tasks      | elapsed:  5.6min
+    [Parallel(n_jobs=-1)]: Done 7188 tasks      | elapsed:  6.1min
+    [Parallel(n_jobs=-1)]: Done 7211 out of 7211 | elapsed:  6.1min finished
 ```python
 mod.resampling_df()
 ```
