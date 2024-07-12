@@ -42,12 +42,12 @@ mod.fit_model()
 mod.spec_uniplot()
 ```
 
-![spec uniplot](./src/specuniplot)
+![spec uniplot](./src/img/spec_uniplot.png)
 
 ```python
 mod.volcano_plot()
 ```
-![volcano](./src/volcano.png)
+![volcano](./src/img/volcano.png)
 
 
 ```python
