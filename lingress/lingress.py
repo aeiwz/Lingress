@@ -222,7 +222,7 @@ class lin_regression:
         else:
             return print("adjustment p-value with {} Done".format(adj_name))
 
-    def resampling(self, dataset=None, n_jobs=8, verbose=5, n_boots=50, adj_method=None):
+    def resampling(self, dataset=None, n_jobs=8, verbose=5, n_boots=50, adj_method='fdr_bh'):
 
         '''
         This function performs a resampling of the dataset to calculate the p-value of the log2 fold change and the regression coefficient. 
@@ -371,7 +371,7 @@ class lin_regression:
 
         self.results = results
 
-        return results
+        return print("Resampling Done")
 
     def resampling_df(self, values=None):
 
@@ -663,11 +663,11 @@ class lin_regression:
         y = pd.DataFrame(beta["Beta coefficient"]*(-np.log10(q_val["q_value"])), index = self.features_name, columns=["beta x -log10 q-value"])
         plot_df = pd.concat([pval, q_val, beta, y, R2, log10_pval], axis=1)
 
-        fig = px.scatter(plot_df, x=x, y="beta x -log10 q-value", text="q_value",
+        fig = px.scatter(plot_df, x=x, y="Beta coefficient", text="q_value",
                             color="R2", range_color=[-1, 1],
                             color_continuous_scale="RdBu",
                             
-                            labels={"beta x -log10 q-value": "β × (-log<sub>10</sub> <i>q-value</i>)",
+                            labels={"Beta coefficient": "β coefficient)",
                                     "x": "𝛿<sub>H</sub> in ppm",
                                     "R2": "R<sub>2</sub>",
                                     "text": "<i>q-value</i>"})
@@ -793,15 +793,4 @@ class lin_regression:
         return fig
     
     
-    #Save figure
-    def html_plot(self, plot_name = "Plot", path_save=None):
-        self.path_save = path_save
-        self.plot_name = plot_name
-        fig = self.fig
-        return fig.write_html("{}/{}.html".format(path_save, plot_name))
-    
-    def png_plot(self, plot_name = "Plot", path_save=None):
-        self.path_save = path_save
-        fig = self.fig
-        return fig.write_image("{}/{}.png".format(path_save, plot_name))
 
