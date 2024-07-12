@@ -55,27 +55,49 @@ mod.resampling(n_jobs=-1, n_boots=100, adj_method='fdr_bh')
 ```
 
   [Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+  
   [Parallel(n_jobs=-1)]: Done   6 tasks      | elapsed:    3.7s
+  
   [Parallel(n_jobs=-1)]: Done  60 tasks      | elapsed:    6.7s
+  
   [Parallel(n_jobs=-1)]: Done 150 tasks      | elapsed:   11.2s
+  
   [Parallel(n_jobs=-1)]: Done 276 tasks      | elapsed:   17.8s
+  
   [Parallel(n_jobs=-1)]: Done 438 tasks      | elapsed:   25.7s
+  
   [Parallel(n_jobs=-1)]: Done 636 tasks      | elapsed:   34.8s
+  
   [Parallel(n_jobs=-1)]: Done 870 tasks      | elapsed:   46.0s
+  
   [Parallel(n_jobs=-1)]: Done 1140 tasks      | elapsed:   58.0s
+  
   [Parallel(n_jobs=-1)]: Done 1446 tasks      | elapsed:  1.2min
+  
   [Parallel(n_jobs=-1)]: Done 1788 tasks      | elapsed:  1.4min
+  
   [Parallel(n_jobs=-1)]: Done 2166 tasks      | elapsed:  1.9min
+  
   [Parallel(n_jobs=-1)]: Done 2580 tasks      | elapsed:  2.4min
+  
   [Parallel(n_jobs=-1)]: Done 3030 tasks      | elapsed:  2.8min
+  
   [Parallel(n_jobs=-1)]: Done 3516 tasks      | elapsed:  3.1min
+  
   [Parallel(n_jobs=-1)]: Done 4038 tasks      | elapsed:  3.6min
+  
   [Parallel(n_jobs=-1)]: Done 4596 tasks      | elapsed:  4.1min
+  
   [Parallel(n_jobs=-1)]: Done 5190 tasks      | elapsed:  4.6min
+  
   [Parallel(n_jobs=-1)]: Done 5820 tasks      | elapsed:  5.1min
+  
   [Parallel(n_jobs=-1)]: Done 6486 tasks      | elapsed:  5.6min
+  
   [Parallel(n_jobs=-1)]: Done 7188 tasks      | elapsed:  6.1min
+  
   [Parallel(n_jobs=-1)]: Done 7211 out of 7211 | elapsed:  6.1min finished
+  
 
 ```python
 mod.resampling_df()
