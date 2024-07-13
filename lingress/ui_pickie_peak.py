@@ -144,6 +144,9 @@ class pickie_peak:
 
             return dict(content=csv_string, filename="x_positions.csv")
 
-        if __name__ == '__main__':
             app.run_server(debug=True)
+
+
+if __name__ == '__main__':
+    app.run_server(debug=True)
 
