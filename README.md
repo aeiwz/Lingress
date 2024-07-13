@@ -16,11 +16,13 @@ pip install lingress
 #Example data
 import numpy as np
 from lingress import pickie_peak
+import pandas as pd
 
-x = np.linspace(0, 10, 1000)
-y = np.exp(-0.5 * ((x - 5)**2) / (0.2**2)) + np.random.normal(0, 0.02, x.size)
-spectra = pd.DataFrame(y).T
-ppm = x
+
+df = pd.read_csv("https://raw.githubusercontent.com/aeiwz/example_data/main/dataset/Example_NMR_data.csv")
+spectra = df.iloc[:,1:]
+ppm = spectra.columns.astype(float).to_list()
+
 
 #defind plot data and run UI
 pickie_peak(spectra=spectra, ppm=ppm).run_ui()
@@ -30,9 +32,17 @@ pickie_peak(spectra=spectra, ppm=ppm).run_ui()
 ## **Linear Regression model**
 
 ```python
+import pandas as pd
 from lingress import lin_regression
 
-mod = lin_regression(x=x, target=target, label=label, features_name=features_name)
+
+df = pd.read_csv("https://raw.githubusercontent.com/aeiwz/example_data/main/dataset/Example_NMR_data.csv")
+X = df.iloc[:,1:]
+ppm = spectra.columns.astype(float).to_list()
+y = df['Group']
+
+
+mod = lin_regression(x=X, target=y, label=y, features_name=ppm, adj_method='fdr_bh')
 mod.create_dataset()
 mod.fit_model()
 
