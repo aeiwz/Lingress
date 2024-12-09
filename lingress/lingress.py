@@ -472,8 +472,10 @@ class lin_regression:
         fpval = self.fpval_df
         r2 = self.r2_df
         p_adj = self.qval_df
-        log_2fc = self.l2_df2        
+        log_2fc = self.l2_df2
+        features_name = self.features_name        
         stats_table = pd.concat([pval, beta, p_adj, r2, fpval, log_2fc], axis=1)
+        stats_table['Features'] = features_name
         self.statstable = stats_table
         return stats_table
 
